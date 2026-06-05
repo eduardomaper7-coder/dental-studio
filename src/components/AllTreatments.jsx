@@ -1,68 +1,79 @@
+import { Link } from 'react-router-dom'
+
 const treatments = [
   {
-    name: 'Implantes + corona',
-    image:
-      'https://images.unsplash.com/photo-1606811971618-4486d14f3f99?auto=format&fit=crop&w=800&q=80',
+    name: 'Implantes dentales',
+    image: '/implantes-dentales-usera.jpg',
+    url: '/#contacto',
   },
   {
     name: 'Endodoncia',
-    image:
-      'https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&w=800&q=80',
+    image: '/endodoncia-usera.png',
+    url: '/endodoncia',
   },
   {
-    name: 'Fundas porcelana',
-    image:
-      'https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=800&q=80',
+    name: 'Fundas de porcelana',
+    image: '/funda-porcelana-siliconio-usera.jpg',
+    url: '/#contacto',
   },
   {
-    name: 'Fundas zirconio',
+    name: 'Fundas de zirconio',
     image: '/fundas-zirconio-usera.jpg',
+    url: '/#contacto',
   },
   {
-    name: 'Frenectomia (cirugía de frenillo)',
+    name: 'Frenectomía',
     image:
       'https://images.unsplash.com/photo-1609840114035-3c981b782dfe?auto=format&fit=crop&w=800&q=80',
+    url: '/#contacto',
   },
   {
-    name: 'Tratamiento encías',
+    name: 'Tratamiento de encías',
     image: '/tratamiento-encias-usera.jpg',
     note: 'Raspajes',
+    url: '/#contacto',
   },
   {
-    name: 'Blanqueamiento',
+    name: 'Blanqueamiento dental',
     image: '/blanqueamiento-dental-usera.jpg',
+    url: '/#contacto',
   },
   {
     name: 'Prótesis total',
     image: '/protesis-total-usera.jpg',
+    url: '/#contacto',
   },
   {
-    name: 'Limpieza',
+    name: 'Limpieza dental',
     image:
       'https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&w=800&q=80',
+    url: '/#contacto',
   },
   {
     name: 'Empastes',
     image: '/empastes-usera.jfif',
+    url: '/#contacto',
   },
   {
-    name: 'Cirugía',
+    name: 'Cirugía dental',
     image: '/cirugia-dental-usera.jpg',
     note: 'Tercer molar incluido',
+    url: '/#contacto',
   },
   {
     name: 'Exodoncia',
     image: '/exodoncia-usera.webp',
+    url: '/#contacto',
   },
 ]
 
 const AllTreatments = () => {
   return (
-    <main className="bg-[#f6fbf7] pt-32 pb-20">
+    <main className="bg-[#f6fbf7] pb-20 pt-32">
       <section className="mx-auto max-w-7xl px-4">
         <div className="mx-auto mb-12 max-w-4xl text-center">
-          <span className="inline-flex rounded-full bg-green-700 px-5 py-2 text-sm font-bold text-white">
-            Radiografía y presupuesto gratis
+          <span className="inline-flex rounded-full bg-orange-500 px-5 py-2 text-sm font-bold text-white">
+            Primera valoración personalizada
           </span>
 
           <h1 className="mt-6 text-4xl font-extrabold leading-tight text-green-700 sm:text-5xl">
@@ -70,9 +81,9 @@ const AllTreatments = () => {
           </h1>
 
           <p className="mt-5 text-lg leading-8 text-neutral-700">
-            Consulta nuestros tratamientos más habituales. Para recibir una
-            valoración personalizada, consulte con la doctora o contacte con
-            nuestra clínica.
+            En Clínica Dental Tinerdent ofrecemos tratamientos orientados a
+            mejorar tu salud bucodental, recuperar la funcionalidad de tu boca y
+            conseguir una sonrisa sana y estética.
           </p>
         </div>
 
@@ -85,7 +96,7 @@ const AllTreatments = () => {
               <div className="h-48 overflow-hidden">
                 <img
                   src={treatment.image}
-                  alt={`${treatment.name} en Usera - Clínica Dental Dra. Anna Tavarone`}
+                  alt={`${treatment.name} - Clínica Dental Tinerdent`}
                   className="h-full w-full object-cover transition duration-500 hover:scale-105"
                   loading="lazy"
                 />
@@ -104,12 +115,12 @@ const AllTreatments = () => {
                   )}
                 </div>
 
-                <a
-                  href="/#contacto"
-                  className="mt-6 inline-flex font-bold text-green-700 transition hover:text-green-900"
+                <Link
+                  to={treatment.url}
+                  className="mt-6 inline-flex font-bold text-orange-500 transition hover:text-orange-600"
                 >
                   Más información →
-                </a>
+                </Link>
               </div>
             </article>
           ))}
@@ -121,14 +132,14 @@ const AllTreatments = () => {
           </h2>
 
           <p className="mx-auto mt-4 max-w-3xl text-lg leading-8 text-neutral-700">
-            Si necesita un tratamiento adicional que no aparece en esta página,
-            no dude en consultar con nuestro equipo. Le atenderemos personalmente
-            en nuestra clínica o llamando al{' '}
+            Si necesitas información sobre cualquier otro tratamiento dental,
+            nuestro equipo estará encantado de ayudarte. Puedes visitarnos en
+            nuestra clínica o llamarnos al{' '}
             <a
-              href="tel:914763069"
+              href="tel:922290395"
               className="inline-block whitespace-nowrap font-extrabold text-green-700 hover:underline"
             >
-              914 76 30 69
+              922 290 395
             </a>
             .
           </p>
@@ -136,13 +147,13 @@ const AllTreatments = () => {
           <div className="mt-8 flex flex-col justify-center gap-4 sm:flex-row">
             <a
               href="/#contacto"
-              className="rounded-xl bg-green-700 px-8 py-4 text-lg font-bold text-white shadow-lg transition hover:bg-green-800"
+              className="rounded-xl bg-orange-500 px-8 py-4 text-lg font-bold text-white shadow-lg transition hover:bg-orange-600"
             >
-              Más información
+              Solicitar información
             </a>
 
             <a
-              href="tel:914763069"
+              href="tel:922290395"
               className="rounded-xl border-2 border-green-700 px-8 py-4 text-lg font-bold text-green-700 transition hover:bg-green-700 hover:text-white"
             >
               Llamar ahora

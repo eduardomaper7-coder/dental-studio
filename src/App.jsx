@@ -13,8 +13,12 @@ import BlogSection from './components/BlogSection'
 import Location from './components/Location'
 import ContactSection from './components/ContactSection'
 import Footer from './components/Footer'
+
 import AllTreatments from './components/AllTreatments'
+
 import Legal from './pages/Legal'
+import Endodoncia from './pages/Endodoncia'
+import ImplantesDentales from './pages/ImplantesDentales'
 
 const Home = () => (
   <>
@@ -38,13 +42,13 @@ const Home = () => (
 function App() {
   return (
     <main className="bg-white text-black">
-
-      {/* 🔥 ESTO ES LO IMPORTANTE */}
       <ScrollToTop />
 
       <Routes>
+        {/* HOME */}
         <Route path="/" element={<Home />} />
 
+        {/* TRATAMIENTOS */}
         <Route
           path="/tratamientos"
           element={
@@ -56,6 +60,33 @@ function App() {
           }
         />
 
+        {/* ENDODONCIA */}
+        <Route
+          path="/endodoncia"
+          element={
+            <>
+              <Navbar />
+              <Endodoncia />
+              <ContactSection />
+              <Footer />
+            </>
+          }
+        />
+
+        {/* IMPLANTES */}
+        <Route
+          path="/implantes-dentales"
+          element={
+            <>
+              <Navbar />
+              <ImplantesDentales />
+              <ContactSection />
+              <Footer />
+            </>
+          }
+        />
+
+        {/* LEGALES */}
         <Route
           path="/legal"
           element={

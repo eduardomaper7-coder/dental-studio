@@ -1,27 +1,31 @@
 const reviews = [
   {
-    text: 'Anna es una excelente odontóloga, llevo años acudiendo a su consulta siempre que lo necesito y tanto sus servicios, como el trato recibido por ella y el personal de la clínica han sido excelentes. Totalmente recomendable.',
-    name: 'Juan S.',
-    time: 'Hace 1 año',
+    text: 'Excelente atención y trato muy cercano. El equipo me explicó todo el tratamiento con claridad y me sentí muy cómodo durante todo el proceso.',
+    name: 'Paciente de Tinerdent',
+    time: 'Google Reviews',
   },
   {
-    text: 'Llevo yendo a esta clínica 20 años, creo que con eso es suficiente para decir que trabajan muy bien y solucionan tus problemas bucodentales sin dolor.',
-    name: 'Esther P.',
-    time: 'Hace 2 años',
+    text: 'Grandes profesionales. La clínica transmite confianza desde el primer momento y el resultado del tratamiento ha sido excelente.',
+    name: 'Paciente de Tinerdent',
+    time: 'Google Reviews',
   },
   {
-    text: 'Excelente tanto en el trato como en el servicio, estoy encantada con ellos, son unos magnificos profesionales.',
-    name: 'Ivan A.',
-    time: 'Hace 1 mes',
+    text: 'Muy contento con la atención recibida. Instalaciones modernas, personal amable y un servicio impecable.',
+    name: 'Paciente de Tinerdent',
+    time: 'Google Reviews',
   },
 ]
 
 const Testimonials = () => {
   return (
-    <section className="bg-[#eef0f1] py-24">
+    <section className="bg-[#f6fbf7] py-24">
       <div className="mx-auto max-w-7xl px-4">
         <div className="mx-auto mb-14 max-w-3xl text-center">
-          <h2 className="text-3xl font-extrabold text-black sm:text-4xl">
+          <span className="inline-block rounded-full bg-orange-100 px-5 py-2 text-sm font-bold text-orange-500">
+            Opiniones de pacientes
+          </span>
+
+          <h2 className="mt-5 text-3xl font-extrabold text-green-700 sm:text-4xl">
             Lo que dicen nuestros pacientes
           </h2>
 
@@ -30,7 +34,7 @@ const Testimonials = () => {
           </div>
 
           <p className="mt-4 text-lg text-neutral-600">
-            Valoración 4.6 en Google Reviews
+            La confianza de nuestros pacientes es nuestra mejor carta de presentación.
           </p>
         </div>
 
@@ -38,7 +42,7 @@ const Testimonials = () => {
           {reviews.map((review, index) => (
             <article
               key={index}
-              className="flex min-h-[340px] flex-col rounded-xl bg-white p-6 shadow-[0_8px_24px_rgba(0,0,0,0.08)] sm:min-h-[360px] sm:p-7 transition hover:-translate-y-1 hover:shadow-[0_12px_30px_rgba(0,0,0,0.12)]"
+              className="flex min-h-[340px] flex-col rounded-xl bg-white p-6 shadow-[0_8px_24px_rgba(0,0,0,0.08)] transition hover:-translate-y-1 hover:shadow-[0_12px_30px_rgba(0,0,0,0.12)] sm:min-h-[360px] sm:p-7"
             >
               <div className="mb-5 text-lg tracking-[0.18em] text-[#E4B525] sm:text-xl">
                 ★★★★★
@@ -49,10 +53,13 @@ const Testimonials = () => {
               </p>
 
               <div className="mt-6 sm:mt-8">
-                <p className="text-lg font-bold text-black sm:text-xl">
+                <p className="text-lg font-bold text-green-700 sm:text-xl">
                   {review.name}
                 </p>
-                <p className="mt-1 text-sm text-neutral-500">{review.time}</p>
+
+                <p className="mt-1 text-sm text-neutral-500">
+                  {review.time}
+                </p>
               </div>
             </article>
           ))}

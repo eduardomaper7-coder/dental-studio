@@ -6,7 +6,7 @@ const posts = [
       'Los implantes dentales ayudan a recuperar piezas perdidas y mejorar la funcionalidad de la boca. Te explicamos cuándo se recomiendan y qué beneficios ofrecen.',
     image:
       'https://images.unsplash.com/photo-1629909615184-74f495363b67?auto=format&fit=crop&w=1200&q=80',
-    href: '#',
+    href: '/implantes-dentales',
   },
   {
     date: '1 abril, 2026',

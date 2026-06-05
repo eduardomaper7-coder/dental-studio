@@ -2,14 +2,14 @@ import { useEffect, useState } from 'react'
 
 const slides = [
   {
-    image: '/clinica-dental-usera-interior.jpeg',
-    alt: 'Interior de la Clínica Dental Dra. Anna Tavarone en Usera',
-    badge: 'Clínica dental en Usera con atención cercana y profesional',
+    image: '/clinica-tinerdent-interior.jpg',
+    alt: 'Interior de Clínica Dental Tinerdent en Santa Cruz de Tenerife',
+    badge: 'Clínica dental moderna en Santa Cruz de Tenerife',
   },
   {
-    image: '/dra-anna-tavarone-clinica-dental-usera.png',
-    alt: 'Clínica Dental Dra. Anna Tavarone en Usera',
-    badge: 'Más de 30 años cuidando sonrisas en Usera',
+    image: '/equipo-tinerdent.webp',
+    alt: 'Equipo profesional de Clínica Dental Tinerdent',
+    badge: 'Atención cercana y personalizada para toda la familia',
   },
 ]
 
@@ -27,66 +27,69 @@ const WhyUs = () => {
   return (
     <section className="bg-[#f6fbf7] py-16">
       <div className="mx-auto grid max-w-7xl items-center gap-12 px-4 lg:grid-cols-2">
+        
         <div className="relative">
-          <span className="absolute -left-10 top-0 hidden rotate-180 text-xs font-bold uppercase tracking-[0.4em] text-green-700 lg:block [writing-mode:vertical-rl]">
-            Dra. Anna Tavarone
+          <span className="absolute -left-10 top-0 hidden rotate-180 text-xs font-bold uppercase tracking-[0.4em] text-orange-500 lg:block [writing-mode:vertical-rl]">
+            Clínica Dental Tinerdent
           </span>
 
           <div className="max-w-xl">
-            <span className="inline-block rounded-full bg-green-700 px-5 py-2 text-sm font-bold text-white">
+            <span className="inline-block rounded-full bg-orange-500 px-5 py-2 text-sm font-bold text-white">
               Nuestro valor
             </span>
 
             <h2 className="mt-5 text-4xl font-extrabold leading-tight text-green-700 sm:text-5xl">
-              ¿Por qué elegir nuestra clínica?
+              ¿Por qué elegir Tinerdent?
             </h2>
 
             <p className="mt-6 text-lg leading-9 text-neutral-700">
-              En Clínica Dental Dra. Anna Tavarone cuidamos tu salud bucodental
-              con una atención cercana, tratamientos personalizados y un trato
-              profesional de confianza.
+              En Clínica Dental Tinerdent trabajamos cada día para ofrecerte una
+              atención cercana, tratamientos personalizados y la confianza que
+              necesitas para cuidar tu sonrisa.
             </p>
 
             <div className="mt-8 space-y-6">
-              <div>
-                <h3 className="text-2xl font-extrabold text-green-700">
-                  Más de 30 años en Usera
-                </h3>
-                <p className="mt-2 text-lg text-neutral-600">
-                  Nuestra experiencia nos permite ofrecer soluciones dentales
-                  adaptadas a cada paciente.
-                </p>
-              </div>
 
               <div>
                 <h3 className="text-2xl font-extrabold text-green-700">
                   Atención personalizada
                 </h3>
                 <p className="mt-2 text-lg text-neutral-600">
-                  Estudiamos cada caso para recomendar el tratamiento dental más
-                  adecuado.
+                  Analizamos cada caso de forma individual para ofrecer el
+                  tratamiento más adecuado para ti.
                 </p>
               </div>
 
               <div>
                 <h3 className="text-2xl font-extrabold text-green-700">
-                  Trato cercano
+                  Equipo profesional
                 </h3>
                 <p className="mt-2 text-lg text-neutral-600">
-                  Queremos que te sientas cómodo, escuchado y seguro desde la
-                  primera visita.
+                  Contamos con profesionales cualificados comprometidos con tu
+                  salud bucodental.
                 </p>
               </div>
 
               <div>
                 <h3 className="text-2xl font-extrabold text-green-700">
-                  Salud y estética dental
+                  Tecnología actual
                 </h3>
                 <p className="mt-2 text-lg text-neutral-600">
-                  Trabajamos para mejorar tanto la salud de tu boca como la
-                  estética de tu sonrisa.
+                  Utilizamos equipamiento moderno para conseguir diagnósticos
+                  precisos y tratamientos eficaces.
                 </p>
               </div>
+
+              <div>
+                <h3 className="text-2xl font-extrabold text-green-700">
+                  Comodidad y confianza
+                </h3>
+                <p className="mt-2 text-lg text-neutral-600">
+                  Queremos que te sientas cómodo y acompañado desde la primera
+                  visita hasta el final del tratamiento.
+                </p>
+              </div>
+
             </div>
           </div>
         </div>
@@ -117,7 +120,7 @@ const WhyUs = () => {
             </div>
           </div>
 
-          <div className="absolute -bottom-6 -left-6 h-28 w-28 rounded-[28px] bg-green-700"></div>
+          <div className="absolute -bottom-6 -left-6 h-28 w-28 rounded-[28px] bg-orange-500"></div>
 
           <div className="mt-6 flex items-center justify-center gap-3">
             {slides.map((_, index) => (
@@ -126,13 +129,16 @@ const WhyUs = () => {
                 type="button"
                 onClick={() => setCurrentSlide(index)}
                 className={`h-3 w-3 rounded-full transition ${
-                  currentSlide === index ? 'bg-green-700' : 'bg-black/20'
+                  currentSlide === index
+                    ? 'bg-orange-500'
+                    : 'bg-black/20'
                 }`}
                 aria-label={`Ir a imagen ${index + 1}`}
               />
             ))}
           </div>
         </div>
+
       </div>
     </section>
   )

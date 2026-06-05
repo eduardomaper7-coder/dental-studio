@@ -2,27 +2,27 @@ import { Link } from 'react-router-dom'
 
 const services = [
   {
-    title: 'Fundas de porcelana y Zirconio',
+    title: 'Implantes dentales',
     description:
-      'Soluciones estéticas y funcionales para proteger dientes debilitados, mejorar la mordida y recuperar una sonrisa natural.',
-    image: '/funda-porcelana-siliconio-usera.jpg',
+      'Recupera piezas dentales perdidas con implantes seguros, funcionales y diseñados para devolver la estética y comodidad de tu sonrisa.',
+    image: '/implantes-dentales-usera.jpg',
   },
   {
-    title: 'Tratamiento de encías (encías sangrantes)',
+    title: 'Ortodoncia',
     description:
-      'Diagnóstico y tratamiento de problemas periodontales para cuidar tus encías, prevenir molestias y conservar tus dientes.',
+      'Corrige la posición de los dientes y mejora tu mordida con tratamientos adaptados a niños, jóvenes y adultos.',
     image: '/tratamiento-encias-usera.webp',
   },
   {
-    title: 'Implantes dentales',
+    title: 'Estética dental',
     description:
-      'Recupera piezas dentales perdidas con soluciones seguras, estables y pensadas para mejorar la masticación y la estética.',
-    image: '/implantes-dentales-usera.jpg',
+      'Mejora la apariencia de tu sonrisa mediante blanqueamiento dental, carillas y otros tratamientos estéticos.',
+    image: '/funda-porcelana-siliconio-usera.jpg',
   },
   {
     title: 'Endodoncia',
     description:
-      'Tratamiento para salvar dientes dañados o infectados, aliviar el dolor y evitar la extracción cuando es posible.',
+      'Tratamiento para eliminar infecciones dentales, aliviar el dolor y conservar el diente natural siempre que sea posible.',
     image: '/endodoncia-usera.png',
   },
 ]
@@ -32,18 +32,18 @@ const Treatments = () => {
     <section id="servicios" className="scroll-mt-28 bg-[#f6fbf7] py-16">
       <div className="mx-auto max-w-7xl px-4">
         <div className="mb-16 text-center">
-          <span className="text-sm font-bold uppercase tracking-[0.25em] text-green-600">
+          <span className="text-sm font-bold uppercase tracking-[0.25em] text-orange-500">
             Tratamientos destacados
           </span>
 
           <h2 className="mt-3 text-3xl font-extrabold text-green-700 sm:text-4xl">
-            Servicios dentales en Usera
+            Tratamientos dentales en Santa Cruz de Tenerife
           </h2>
 
           <p className="mx-auto mt-4 max-w-3xl text-lg text-neutral-600 sm:text-xl">
-            En Clínica Dental Dra. Anna Tavarone destacamos algunos de nuestros
-            tratamientos más solicitados, aunque contamos con muchos más
-            servicios para cuidar tu salud bucodental.
+            En Clínica Dental Tinerdent ofrecemos tratamientos personalizados
+            para cuidar tu salud bucodental y ayudarte a conseguir una sonrisa
+            sana y estética.
           </p>
         </div>
 
@@ -56,7 +56,7 @@ const Treatments = () => {
               <div className="h-56 w-full sm:h-auto sm:w-[40%]">
                 <img
                   src={service.image}
-                  alt={`${service.title} en Usera - Clínica Dental Dra. Anna Tavarone`}
+                  alt={`${service.title} en Santa Cruz de Tenerife - Clínica Dental Tinerdent`}
                   className="h-full w-full object-cover"
                   loading="lazy"
                 />
@@ -76,7 +76,7 @@ const Treatments = () => {
                 <div className="mt-6">
                   <Link
                     to="/tratamientos"
-                    className="inline-flex items-center gap-2 text-base font-semibold text-green-700 transition hover:text-green-900"
+                    className="inline-flex items-center gap-2 text-base font-semibold text-orange-500 transition hover:text-orange-600"
                   >
                     Más información →
                   </Link>
@@ -93,7 +93,7 @@ const Treatments = () => {
 
           <Link
             to="/tratamientos"
-            className="mt-5 inline-flex items-center rounded-xl bg-green-700 px-8 py-4 text-lg font-bold text-white shadow-lg transition hover:bg-green-800"
+            className="mt-5 inline-flex items-center rounded-xl bg-orange-500 px-8 py-4 text-lg font-bold text-white shadow-lg transition hover:bg-orange-600"
           >
             Ver todos los tratamientos
           </Link>
