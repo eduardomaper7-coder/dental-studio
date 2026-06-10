@@ -49,20 +49,19 @@ const Hero = () => {
           en Santa Cruz de Tenerife.
         </p>
 
-        {/* Badges */}
-        <div className="mt-6 flex flex-col gap-2 sm:mt-8 sm:flex-row sm:gap-3">
-          <span className="rounded-full bg-white px-5 py-2 text-sm font-bold text-green-700 shadow-lg sm:px-6 sm:py-3 sm:text-base">
+        {/* Badges solo en móvil */}
+        <div className="mt-6 flex flex-col gap-2 sm:hidden">
+          <span className="rounded-full bg-white px-5 py-2 text-sm font-bold text-green-700 shadow-lg">
             Atención personalizada
           </span>
 
-          <span className="rounded-full bg-orange-500 px-5 py-2 text-sm font-bold text-white shadow-lg sm:px-6 sm:py-3 sm:text-base">
+          <span className="rounded-full bg-orange-500 px-5 py-2 text-sm font-bold text-white shadow-lg">
             Santa Cruz de Tenerife
           </span>
         </div>
 
         {/* BOTONES */}
-        <div className="mt-8 flex w-full flex-col gap-3 sm:mt-10 sm:w-auto sm:flex-row">
-
+        <div className="mt-6 flex w-full flex-col gap-3 sm:mt-8 sm:w-auto sm:flex-row">
           <a
             href={whatsappUrl}
             target="_blank"
@@ -81,12 +80,11 @@ const Hero = () => {
 
           <a
             href={`tel:${phoneNumber}`}
-            className="flex w-full items-center justify-center rounded-xl bg-orange-500 px-6 py-4 text-base font-extrabold text-white shadow-xl transition hover:bg-orange-600 sm:w-auto sm:px-8 sm:text-lg whitespace-nowrap"
+            className="flex w-full items-center justify-center whitespace-nowrap rounded-xl bg-orange-500 px-6 py-4 text-base font-extrabold text-white shadow-xl transition hover:bg-orange-600 sm:w-auto sm:px-8 sm:text-lg"
             aria-label="Llamar a Clínica Dental Tinerdent"
           >
             Llamar ahora
           </a>
-
         </div>
 
         {/* Link servicios */}
@@ -121,7 +119,6 @@ const Hero = () => {
           className="h-8 w-8 sm:h-10 sm:w-10"
         />
       </a>
-
     </section>
   )
 }
