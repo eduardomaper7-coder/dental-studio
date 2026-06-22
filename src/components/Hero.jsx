@@ -1,126 +1,103 @@
+import { Phone, ArrowRight } from "lucide-react";
+
 const Hero = () => {
-  const phoneNumber = '922290395'
-  const whatsappNumber = '34922290395'
-  const whatsappMessage = encodeURIComponent(
-    'Hola, quiero pedir cita en Clínica Dental Tinerdent.'
-  )
-  const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`
-
-  const isMobile = typeof window !== 'undefined' && window.innerWidth < 768
-
   return (
-    <section
-      id="inicio"
-      className="relative flex min-h-screen items-center justify-center overflow-hidden"
-      style={{
-        backgroundImage: "url('/hero-web.jpg')",
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat',
-        backgroundAttachment: isMobile ? 'scroll' : 'fixed',
-      }}
-    >
-      {/* Overlay */}
-      <div className="absolute inset-0 bg-green-950/55"></div>
-      <div className="absolute inset-0 bg-gradient-to-b from-green-700/20 via-green-900/40 to-green-950/80"></div>
+    <section className="relative min-h-screen bg-[#FAF9F7] overflow-hidden">
+      {/* Background decoration */}
+      <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#E8E2DA]/40 rounded-full blur-3xl" />
 
-      <div className="relative z-10 mx-auto flex max-w-5xl flex-col items-center px-4 pb-12 pt-24 text-center sm:pb-16 sm:pt-28">
-        
-        {/* Título superior */}
-        <div className="mb-4 flex flex-col items-center sm:mb-6">
-          <span className="text-lg font-light tracking-widest text-white/85 sm:text-2xl">
-            CLÍNICA DENTAL EN SANTA CRUZ DE TENERIFE
-          </span>
+      <div className="container mx-auto px-6 lg:px-12">
+        <div className="grid lg:grid-cols-2 items-center min-h-screen gap-16">
 
-          <span className="text-2xl font-extrabold tracking-wide text-orange-400 sm:text-3xl md:text-4xl">
-            Tinerdent
-          </span>
+          {/* Content */}
+          <div className="relative z-10 max-w-2xl">
+            <span className="inline-block mb-6 px-4 py-2 text-xs tracking-[0.25em] uppercase border border-neutral-300 rounded-full text-neutral-700">
+              Clínica Dental Premium · Santa Cruz de Tenerife
+            </span>
+
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-light leading-[1.05] tracking-tight text-neutral-900">
+              Sonrisas
+              <span className="block font-medium">
+                diseñadas con precisión
+              </span>
+            </h1>
+
+            <p className="mt-8 text-lg text-neutral-600 leading-relaxed max-w-xl">
+              En Dental Studio combinamos tecnología avanzada,
+              odontología estética y atención personalizada para crear
+              tratamientos exclusivos que cuidan tu salud y potencian tu sonrisa.
+            </p>
+
+            <div className="flex flex-col sm:flex-row gap-4 mt-10">
+              <a
+  href="tel:922068631"
+  className="inline-flex items-center justify-center gap-3 rounded-full bg-neutral-900 px-8 py-4 text-white transition-all hover:bg-neutral-800"
+>
+  <Phone size={18} className="text-white" />
+  <span className="text-white">922 068 631</span>
+</a>
+
+              <a
+                href="#tratamientos"
+                className="inline-flex items-center justify-center gap-3 px-8 py-4 border border-neutral-300 rounded-full hover:border-neutral-900 transition-all"
+              >
+                Ver tratamientos
+                <ArrowRight size={18} />
+              </a>
+            </div>
+
+            <div className="flex items-center gap-10 mt-14 pt-8 border-t border-neutral-200">
+              <div>
+                <p className="text-3xl font-light">+1000</p>
+                <span className="text-sm text-neutral-500">
+                  Pacientes satisfechos
+                </span>
+              </div>
+
+              <div>
+                <p className="text-3xl font-light">5★</p>
+                <span className="text-sm text-neutral-500">
+                  Atención personalizada
+                </span>
+              </div>
+
+              <div>
+                <p className="text-3xl font-light">Digital</p>
+                <span className="text-sm text-neutral-500">
+                  Tecnología avanzada
+                </span>
+              </div>
+            </div>
+          </div>
+
+          {/* Image */}
+          <div className="relative">
+            <div className="relative overflow-hidden rounded-[40px]">
+              <img
+                src="/hero-web.webp"
+                alt="Dental Studio"
+                className="w-full h-[750px] object-cover"
+              />
+
+              <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
+            </div>
+
+            {/* Floating card */}
+            <div className="absolute -bottom-6 -left-6 bg-white p-6 rounded-3xl shadow-xl max-w-xs">
+              <p className="text-sm uppercase tracking-[0.2em] text-neutral-500 mb-2">
+                Estética Dental
+              </p>
+              <p className="text-neutral-900">
+                Carillas, implantes, ortodoncia y tratamientos avanzados
+                para una sonrisa natural y elegante.
+              </p>
+            </div>
+          </div>
+
         </div>
-
-        {/* H1 */}
-        <h1 className="max-w-4xl text-3xl font-extrabold leading-tight text-white sm:text-5xl md:text-7xl">
-          Tu dentista de confianza en Santa Cruz de Tenerife
-        </h1>
-
-        {/* Texto (oculto en móvil) */}
-        <p className="mt-6 hidden max-w-3xl text-lg leading-9 text-white/90 sm:block sm:text-xl">
-          En Clínica Dental Tinerdent cuidamos tu salud bucodental con
-          tratamientos personalizados, atención cercana y un equipo profesional
-          en Santa Cruz de Tenerife.
-        </p>
-
-        {/* Badges solo en móvil */}
-        <div className="mt-6 flex flex-col gap-2 sm:hidden">
-          <span className="rounded-full bg-white px-5 py-2 text-sm font-bold text-green-700 shadow-lg">
-            Atención personalizada
-          </span>
-
-          <span className="rounded-full bg-orange-500 px-5 py-2 text-sm font-bold text-white shadow-lg">
-            Santa Cruz de Tenerife
-          </span>
-        </div>
-
-        {/* BOTONES */}
-        <div className="mt-6 flex w-full flex-col gap-3 sm:mt-8 sm:w-auto sm:flex-row">
-          <a
-            href={whatsappUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex w-full items-center justify-center gap-3 rounded-xl bg-green-600 px-6 py-4 text-base font-extrabold text-white shadow-xl transition hover:bg-green-700 sm:w-auto sm:px-8 sm:text-lg"
-            aria-label="Pedir cita por WhatsApp"
-          >
-            <img
-              src="/whatsapp.png"
-              alt=""
-              className="h-6 w-6 sm:h-7 sm:w-7"
-              aria-hidden="true"
-            />
-            Pedir cita por WhatsApp
-          </a>
-
-          <a
-            href={`tel:${phoneNumber}`}
-            className="flex w-full items-center justify-center whitespace-nowrap rounded-xl bg-orange-500 px-6 py-4 text-base font-extrabold text-white shadow-xl transition hover:bg-orange-600 sm:w-auto sm:px-8 sm:text-lg"
-            aria-label="Llamar a Clínica Dental Tinerdent"
-          >
-            Llamar ahora
-          </a>
-        </div>
-
-        {/* Link servicios */}
-        <a
-          href="#servicios"
-          className="mt-5 hidden items-center rounded-xl border border-white px-8 py-4 text-lg font-semibold text-white transition hover:bg-white hover:text-green-700 sm:inline-flex"
-        >
-          Ver tratamientos dentales
-        </a>
-
-        {/* Scroll */}
-        <a
-          href="#servicios"
-          className="mt-12 hidden flex-col items-center text-base font-medium text-white sm:inline-flex"
-        >
-          Descubre más
-          <span className="mt-2 text-2xl text-orange-400">⌄</span>
-        </a>
       </div>
-
-      {/* BOTÓN WHATSAPP FLOTANTE */}
-      <a
-        href={whatsappUrl}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="fixed bottom-5 right-5 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-green-600 shadow-2xl transition hover:scale-110 hover:bg-green-700 sm:h-16 sm:w-16"
-        aria-label="Escribir por WhatsApp"
-      >
-        <img
-          src="/whatsapp.png"
-          alt="WhatsApp"
-          className="h-8 w-8 sm:h-10 sm:w-10"
-        />
-      </a>
     </section>
-  )
-}
+  );
+};
 
-export default Hero
+export default Hero;

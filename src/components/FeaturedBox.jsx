@@ -1,61 +1,56 @@
 const FeaturedBox = () => {
   return (
-    <section className="bg-[#f6fbf7] py-16 pb-12">
+    <section className="bg-[#FAF9F7] py-24">
       <div className="mx-auto max-w-7xl px-4">
-        <div className="relative overflow-hidden rounded-[28px] bg-green-50 min-h-[auto] lg:min-h-[520px]">
+        <div className="relative overflow-hidden rounded-[40px]">
 
-          {/* Imagen */}
-          <div className="h-[260px] w-full lg:h-[520px] lg:w-[62%]">
-            <img
-              src="/clinica-dental.jpg"
-              alt="Clínica Dental Tinerdent"
-              className="h-full w-full object-cover"
-            />
-          </div>
+          <img
+            src="/clinica-dental.jpg"
+            alt="Dental Studio"
+            className="h-[700px] w-full object-cover"
+          />
 
-          {/* Caja texto */}
-          <div className="relative lg:absolute lg:right-12 lg:top-1/2 lg:w-[42%] lg:-translate-y-1/2">
-            <div className="m-4 rounded-[24px] bg-white p-6 shadow-[0_20px_60px_rgba(22,101,52,0.14)] sm:p-8 md:p-10">
+          <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-transparent" />
 
-              <span className="inline-block rounded-full bg-orange-100 px-4 py-2 text-sm font-bold text-orange-600">
-                Clínica Dental en Santa Cruz de Tenerife
+          <div className="absolute inset-0 flex items-center">
+            <div className="max-w-2xl px-8 md:px-16">
+
+              <span className="text-xs uppercase tracking-[0.35em] text-white/70">
+                Dental Studio · Santa Cruz de Tenerife
               </span>
 
-              <h2 className="mt-4 text-2xl font-extrabold leading-tight text-green-700 sm:text-4xl">
-                Cuidamos tu sonrisa con una atención{' '}
-                <span className="text-orange-500">personalizada</span>
+              <h2 className="mt-6 text-5xl font-light leading-tight text-white md:text-7xl">
+                La sonrisa es una verdadera fuerza vital.
               </h2>
 
-              <p className="mt-4 text-sm leading-7 text-neutral-600 sm:text-lg">
-                En Clínica Dental Tinerdent estudiamos cada caso de forma
-                individual para ofrecer tratamientos adaptados a las necesidades
-                de cada paciente. Nuestro objetivo es ayudarte a mantener una
-                sonrisa sana, funcional y estética con la máxima confianza.
+              <p className="mt-6 max-w-xl text-lg leading-8 text-white/80">
+                La única capaz de mover lo inamovible. Diseñamos sonrisas que
+                transmiten confianza, bienestar y naturalidad.
               </p>
 
-              {/* Botones */}
-              <div className="mt-6 flex flex-col gap-3 sm:flex-row">
+              <div className="mt-10 flex flex-col gap-4 sm:flex-row">
                 <a
-                  href="tel:922290395"
-                  className="inline-flex flex-1 items-center justify-center whitespace-nowrap rounded-xl bg-green-700 px-6 py-4 text-base font-bold text-white transition hover:bg-green-800"
+                  href="tel:922068631"
+                  className="rounded-full bg-white px-8 py-4 text-center text-sm font-medium text-black"
                 >
-                  📞 Llamar al 922 290 395
+                  Llamar al 922 068 631
                 </a>
 
                 <a
                   href="#contacto"
-                  className="inline-flex flex-1 items-center justify-center whitespace-nowrap rounded-xl bg-orange-500 px-6 py-4 text-base font-bold text-white transition hover:bg-orange-600"
+                  className="rounded-full border border-white/30 px-8 py-4 text-center text-sm font-medium text-white backdrop-blur-sm"
                 >
-                  Solicitar cita
+                  Solicitar valoración
                 </a>
               </div>
 
             </div>
           </div>
+
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default FeaturedBox
+export default FeaturedBox;

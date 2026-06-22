@@ -1,106 +1,153 @@
-import { Link } from 'react-router-dom'
+import { Link } from "react-router-dom";
 
 const services = [
   {
-    title: 'Implantes dentales',
+    title: "Implantes dentales",
     description:
-      'Recupera piezas dentales perdidas con implantes seguros, funcionales y diseñados para devolver la estética y comodidad de tu sonrisa.',
-    image: '/implantes-dentales-usera.jpg',
+      "Soluciones fijas, seguras y naturales para recuperar piezas dentales perdidas con planificación personalizada.",
+    image: "/implantes-dentales-usera.jpg",
   },
   {
-    title: 'Ortodoncia',
+    title: "Ortodoncia",
     description:
-      'Corrige la posición de los dientes y mejora tu mordida con tratamientos adaptados a niños, jóvenes y adultos.',
-    image: '/tratamiento-encias-usera.webp',
+      "Alineamos tu sonrisa y mejoramos tu mordida con tratamientos discretos, cómodos y adaptados a cada paciente.",
+    image: "/tratamiento-encias-usera.webp",
   },
   {
-    title: 'Estética dental',
+    title: "Estética dental",
     description:
-      'Mejora la apariencia de tu sonrisa mediante blanqueamiento dental, carillas y otros tratamientos estéticos.',
-    image: '/funda-porcelana-siliconio-usera.jpg',
+      "Carillas, blanqueamiento y tratamientos estéticos para conseguir una sonrisa luminosa, armónica y natural.",
+    image: "/funda-porcelana-siliconio-usera.jpg",
   },
   {
-    title: 'Endodoncia',
+    title: "Endodoncia",
     description:
-      'Tratamiento para eliminar infecciones dentales, aliviar el dolor y conservar el diente natural siempre que sea posible.',
-    image: '/endodoncia-usera.png',
+      "Tratamientos conservadores para aliviar el dolor, eliminar infecciones y preservar tus dientes naturales.",
+    image: "/endodoncia-usera.png",
   },
-]
+];
 
 const Treatments = () => {
   return (
-    <section id="servicios" className="scroll-mt-28 bg-[#f6fbf7] py-16">
-      <div className="mx-auto max-w-7xl px-4">
-        <div className="mb-16 text-center">
-          <span className="text-sm font-bold uppercase tracking-[0.25em] text-orange-500">
-            Tratamientos destacados
-          </span>
+    <section
+      id="servicios"
+      className="scroll-mt-28 bg-[#FAF9F7] px-4 py-24"
+    >
+      <div className="mx-auto max-w-7xl">
+        <div className="mb-16 grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-end">
+          <div>
+            <span className="text-xs font-medium uppercase tracking-[0.35em] text-neutral-500">
+              Tratamientos exclusivos
+            </span>
 
-          <h2 className="mt-3 text-3xl font-extrabold text-green-700 sm:text-4xl">
-            Tratamientos dentales en Santa Cruz de Tenerife
-          </h2>
+            <h2 className="mt-5 max-w-3xl text-4xl font-light leading-tight tracking-tight text-neutral-950 sm:text-5xl lg:text-6xl">
+              Odontología estética y avanzada en Santa Cruz de Tenerife
+            </h2>
+          </div>
 
-          <p className="mx-auto mt-4 max-w-3xl text-lg text-neutral-600 sm:text-xl">
-            En Clínica Dental Tinerdent ofrecemos tratamientos personalizados
-            para cuidar tu salud bucodental y ayudarte a conseguir una sonrisa
-            sana y estética.
+          <p className="max-w-2xl text-lg leading-8 text-neutral-600 lg:ml-auto">
+            En Dental Studio combinamos precisión clínica, tecnología avanzada
+            y una atención cercana para diseñar tratamientos dentales naturales,
+            funcionales y elegantes.
           </p>
         </div>
 
-        <div className="grid gap-8 md:grid-cols-2">
+        <div className="grid gap-6 md:grid-cols-2">
           {services.map((service, index) => (
-            <div
+            <article
               key={index}
-              className="flex flex-col overflow-hidden rounded-2xl bg-white shadow-[0_10px_30px_rgba(22,101,52,0.10)] transition hover:-translate-y-1 hover:shadow-[0_15px_40px_rgba(22,101,52,0.16)] sm:flex-row"
+              className="group overflow-hidden rounded-[2rem] border border-neutral-200/80 bg-white shadow-[0_25px_80px_rgba(0,0,0,0.06)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_35px_100px_rgba(0,0,0,0.10)]"
             >
-              <div className="h-56 w-full sm:h-auto sm:w-[40%]">
+              <div className="relative h-72 overflow-hidden">
                 <img
                   src={service.image}
-                  alt={`${service.title} en Santa Cruz de Tenerife - Clínica Dental Tinerdent`}
-                  className="h-full w-full object-cover"
+                  alt={`${service.title} en Dental Studio Santa Cruz de Tenerife`}
+                  className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
                   loading="lazy"
                 />
-              </div>
 
-              <div className="flex w-full flex-col justify-between p-6 sm:w-[60%]">
-                <div>
-                  <h3 className="text-xl font-extrabold text-green-700 sm:text-2xl">
-                    {service.title}
-                  </h3>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-black/10 to-transparent" />
 
-                  <p className="mt-3 text-base leading-8 text-neutral-600 sm:text-lg">
-                    {service.description}
-                  </p>
+                <div className="absolute left-6 top-6 rounded-full bg-white/85 px-4 py-2 text-xs font-medium uppercase tracking-[0.22em] text-neutral-700 backdrop-blur-md">
+                  Dental Studio
                 </div>
 
-                <div className="mt-6">
+                <h3 className="absolute bottom-6 left-6 right-6 text-3xl font-light tracking-tight text-white">
+                  {service.title}
+                </h3>
+              </div>
+
+              <div className="p-7">
+                <p className="text-base leading-8 text-neutral-600">
+                  {service.description}
+                </p>
+
+                <div className="mt-8 flex items-center justify-between gap-4">
                   <Link
                     to="/tratamientos"
-                    className="inline-flex items-center gap-2 text-base font-semibold text-orange-500 transition hover:text-orange-600"
+                    className="inline-flex items-center rounded-full border border-neutral-300 px-5 py-3 text-sm font-medium text-neutral-900 transition hover:border-neutral-900"
                   >
-                    Más información →
+                    Más información
+                    <span className="ml-3">→</span>
                   </Link>
+
+                  <span className="text-sm text-neutral-400">
+                    0{index + 1}
+                  </span>
                 </div>
               </div>
-            </div>
+            </article>
           ))}
         </div>
 
-        <div className="mt-14 text-center">
-          <p className="text-lg font-medium text-neutral-700">
-            ¿Buscas otro tratamiento dental?
-          </p>
+        <div className="mt-16 overflow-hidden rounded-[2rem] bg-neutral-950 px-8 py-10 text-white md:flex md:items-center md:justify-between md:px-12">
+  <div>
+    <span className="text-xs uppercase tracking-[0.3em] text-neutral-400">
+      Valoración personalizada
+    </span>
 
-          <Link
-            to="/tratamientos"
-            className="mt-5 inline-flex items-center rounded-xl bg-orange-500 px-8 py-4 text-lg font-bold text-white shadow-lg transition hover:bg-orange-600"
-          >
-            Ver todos los tratamientos
-          </Link>
-        </div>
+
+<h3 className="mt-3 text-3xl font-light tracking-tight md:text-4xl">
+  ¿Quieres saber qué tratamiento necesitas?
+</h3>
+
+<p className="mt-4 max-w-2xl leading-7 text-neutral-300">
+  Nuestro equipo puede orientarte y diseñar un plan adaptado a tu
+  sonrisa, tu salud dental y tus objetivos estéticos.
+</p>
+
+
+  </div>
+
+  <div className="mt-8 flex flex-col gap-3 md:mt-0 md:flex-row">
+    <a
+      href="tel:922068631"
+      className="inline-flex items-center justify-center rounded-full bg-white px-7 py-4 text-sm font-medium"
+      style={{ color: "#000000" }}
+    >
+      Llamar al
+      <span style={{ color: "#000000", marginLeft: "6px" }}>
+        922 068 631
+      </span>
+    </a>
+
+
+<Link
+  to="/tratamientos"
+  className="inline-flex items-center justify-center rounded-full border border-white/20 px-7 py-4 text-sm font-medium text-white"
+>
+  Ver todos los tratamientos
+</Link>
+
+
+  </div>
+</div>
+
+
+
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Treatments
+export default Treatments;

@@ -1,127 +1,82 @@
-import { FaFacebookF, FaInstagram, FaLinkedinIn } from 'react-icons/fa'
-import { Link } from 'react-router-dom'
+import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <footer className="bg-black text-white">
-      <div className="mx-auto max-w-7xl px-4 py-14">
-        <div className="grid gap-12 md:grid-cols-2 md:items-start">
-
-          {/* Info */}
+    <footer className="bg-neutral-950 text-white">
+      <div className="mx-auto max-w-7xl px-4 py-16">
+        <div className="grid gap-12 lg:grid-cols-[1.2fr_0.8fr]">
           <div>
-            <div className="mb-6 leading-tight">
-              <span className="block text-2xl font-extrabold text-white">
-                CLÍNICA DENTAL
-              </span>
-              <span className="block text-lg font-semibold text-orange-500">
-                Tinerdent
-              </span>
-            </div>
+            <img
+              src="/logo-dental-studio.png"
+              alt="Dental Studio"
+              className="mb-8 h-24 w-auto brightness-0 invert"
+            />
 
-            <p className="max-w-2xl text-lg leading-relaxed text-white/90">
-              En Clínica Dental Tinerdent trabajamos para cuidar tu salud
-              bucodental con tratamientos personalizados, tecnología actual y
-              una atención cercana en Santa Cruz de Tenerife.
+            <p className="max-w-2xl text-lg leading-8 text-white/70">
+              En Dental Studio combinamos precisión clínica, estética dental y
+              atención personalizada para ayudarte a sonreír con seguridad,
+              naturalidad y confianza en Santa Cruz de Tenerife.
             </p>
 
-            <div className="mt-8 flex items-center gap-5">
-              <a
-                href="#"
-                aria-label="Facebook"
-                className="text-2xl text-green-600 transition hover:text-orange-500"
-              >
+            <div className="mt-8 flex items-center gap-4">
+              <a href="#" aria-label="Facebook" className="flex h-11 w-11 items-center justify-center rounded-full border border-white/15 text-white/80">
                 <FaFacebookF />
               </a>
 
-              <a
-                href="#"
-                aria-label="Instagram"
-                className="text-2xl text-green-600 transition hover:text-orange-500"
-              >
+              <a href="#" aria-label="Instagram" className="flex h-11 w-11 items-center justify-center rounded-full border border-white/15 text-white/80">
                 <FaInstagram />
               </a>
 
-              <a
-                href="#"
-                aria-label="LinkedIn"
-                className="text-2xl text-green-600 transition hover:text-orange-500"
-              >
+              <a href="#" aria-label="LinkedIn" className="flex h-11 w-11 items-center justify-center rounded-full border border-white/15 text-white/80">
                 <FaLinkedinIn />
               </a>
             </div>
           </div>
 
-          {/* Contacto */}
-          <div className="text-left md:text-right">
-            <h3 className="text-3xl font-bold text-orange-500">
+          <div className="lg:text-right">
+            <span className="text-xs uppercase tracking-[0.35em] text-white/40">
               Contacto
-            </h3>
+            </span>
 
-            <div className="mt-6 space-y-4 text-lg leading-relaxed">
+            <div className="mt-6 space-y-5 text-lg leading-8 text-white/75">
               <p>
-                C. de Pérez de Rozas, 18
+                C. Méndez Núñez, 38
                 <br />
-                38004 Santa Cruz de Tenerife
+                38003 Santa Cruz de Tenerife
               </p>
 
               <p>
-                <a
-                  href="tel:922290395"
-                  className="whitespace-nowrap font-bold text-white transition hover:text-green-600"
-                >
-                  922 290 395
-                </a>
-              </p>
-
-              <p>
-                <a
-                  href="mailto:info@tinerdent.es"
-                  className="text-green-600 transition hover:text-orange-500"
-                >
-                  info@tinerdent.es
+                <a href="tel:922068631" className="font-medium text-white">
+                  922 068 631
                 </a>
               </p>
             </div>
+
+            <Link
+              to="/#contacto"
+              className="mt-8 inline-flex rounded-full bg-white px-7 py-4 text-sm font-medium"
+              style={{ color: "#000000" }}
+            >
+              Solicitar valoración
+            </Link>
           </div>
         </div>
 
-        {/* CTA */}
-        <div className="mt-12 flex flex-col items-center justify-center gap-4 text-center">
-          <p className="text-lg text-white/90">
-            ¿Necesitas pedir cita o resolver alguna duda?
-          </p>
+        <div className="mt-14 border-t border-white/10 pt-8">
+          <div className="flex flex-col gap-5 text-sm text-white/50 md:flex-row md:items-center md:justify-between">
+            <p>© 2026 Dental Studio. Todos los derechos reservados.</p>
 
-          <Link
-            to="/#contacto"
-            className="rounded-xl bg-orange-500 px-8 py-3 text-lg font-bold text-white transition hover:bg-orange-600"
-          >
-            Solicitar cita
-          </Link>
-        </div>
-
-        {/* Footer bottom */}
-        <div className="mt-12 border-t border-white/15 pt-8 text-center">
-          <p className="text-base text-white/80">
-            © 2026 Clínica Dental Tinerdent. Todos los derechos reservados.
-          </p>
-
-          <div className="mt-5 flex flex-wrap items-center justify-center gap-x-6 gap-y-3 text-sm text-green-600">
-            <Link to="/legal" className="transition hover:text-orange-500">
-              Aviso legal
-            </Link>
-
-            <Link to="/privacidad" className="transition hover:text-orange-500">
-              Política de privacidad
-            </Link>
-
-            <Link to="/cookies" className="transition hover:text-orange-500">
-              Política de cookies
-            </Link>
+            <div className="flex flex-wrap gap-x-6 gap-y-3">
+              <Link to="/legal">Aviso legal</Link>
+              <Link to="/privacidad">Política de privacidad</Link>
+              <Link to="/cookies">Política de cookies</Link>
+            </div>
           </div>
         </div>
       </div>
     </footer>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;
